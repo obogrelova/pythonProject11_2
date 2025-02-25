@@ -27,7 +27,7 @@ async def start(message: Message):
 async def help(message: Message):
     await message.answer('Этот бот умеет выполнять команды:\n/start\n/help\n/photo\n/text\n/translate')
 
-@dp. message(F.photo)
+@dp.message(F.photo)
 async def react_photo(message: Message):
     photo = message.photo[-1]
     file_info = await bot.get_file(photo.file_id)
